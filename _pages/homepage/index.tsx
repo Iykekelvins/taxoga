@@ -1,10 +1,12 @@
-import ChatWidget from './chat-widget';
 import Hero from './hero';
+import Stats from './stats';
+import ChatWidget from './chat-widget';
 
 const Home = () => {
 	return (
 		<div>
 			<Hero />
+			<Stats />
 			<ChatWidget />
 		</div>
 	);

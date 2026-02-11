@@ -7,15 +7,18 @@ export default function Hero() {
 	return (
 		<section
 			className='bg-[linear-gradient(180deg,#001F3F_0%,#003366_100%),linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2))]
-		 pt-[max(5rem,40px)] pb-[max(7.313rem,40px)] relative px-gutter'>
+		 pt-[max(5rem,40px)]  lg:pb-[max(7.313rem)] relative px-gutter'>
 			<div className='max-w-container mx-auto'>
-				<div className='flex flex-col lg:flex-row lg:items-center lg:gap-9.25 justify-between'>
+				<div
+					className='flex flex-col lg:flex-row lg:items-center lg:gap-9.25 justify-between
+				relative z-2
+				'>
 					<div className='sm:max-w-[max(420px,33.5rem)]'>
-						<h1 className='text-white text-48 font-bold leading-normal'>
+						<h1 className='text-white text-48 font-bold leading-[1.4]'>
 							Avoid <span className='text-sky-blue'>Tax Wahala!</span> Stay Compliant
 							While Paying the Lowest Possible Taxes.
 						</h1>
-						<p className='text-20 text-light-grey-2 mt-[max(1.5rem,24px)]'>
+						<p className='text-20 text-light-grey-2 mt-[max(1.5rem,24px)] leading-[1.7]'>
 							No matter your tax needs, our tax experts will help you file with
 							confidence and get the most value when you file your taxes.
 						</p>
@@ -32,7 +35,7 @@ export default function Hero() {
 						</div>
 					</div>
 
-					<div className=' mt-[max(95px)] lg:mt-0'>
+					<div className='flex-1 mt-[max(95px)] lg:mt-0'>
 						<figure>
 							<Image
 								src='/home/hero-img.png'
