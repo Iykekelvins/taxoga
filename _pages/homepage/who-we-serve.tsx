@@ -9,7 +9,7 @@ export default function WhoWeServe() {
 	return (
 		<section className='bg-cream-peach px-gutter pt-[max(4.6875rem,63px)] pb-[max(13.1875rem,111px)]'>
 			<div className='app-container'>
-				<div className='flex flex-col gap-[max(1.5rem,24px)]'>
+				<div className='space-y-[max(1.5rem,24px)]'>
 					<Tag>Who We Serve</Tag>
 					<h2 className='text-heading text-40 font-bold leading-[1.7]'>
 						We are Experts for Every Tax Situation

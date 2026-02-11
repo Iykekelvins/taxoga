@@ -146,7 +146,7 @@ export default function TaxComplianceSteps() {
 				<div className='flex flex-col sm:flex-row items-start justify-between gap-[max(40px)]'>
 					<div
 						className='flex flex-col gap-[max(1.5rem,20px)]
-            max-w-[max(37.688rem,377px)] md:sticky top-[max(86px)] sm:top-36 lg:top-30 des:top-24
+            lg:max-w-[max(37.688rem,377px)] md:sticky top-[max(86px)] sm:top-36 lg:top-30 des:top-24
             '>
 						<Tag>How It Works</Tag>
 						<h2 className='text-heading text-40 leading-[1.7] font-bold'>
@@ -167,7 +167,7 @@ export default function TaxComplianceSteps() {
 						</div>
 					</div>
 
-					<div className='max-w-[max(30.625rem,400px)]'>
+					<div className='lg:max-w-[max(30.625rem,400px)]'>
 						<ul className='flex flex-col gap-[max(2.5rem,40px)]'>
 							{TAXCOMPLIANCESTEPS.map((step, i) => (
 								<li
