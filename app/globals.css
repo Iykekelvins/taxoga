@@ -2,12 +2,53 @@
 
 :root {
 	--background: #ffffff;
-	--foreground: #001f3f;
+	--light-cream: #fffff6;
+	--extra-light-grey: #f4f4f4;
+	--mid-grey: #e9e9e9;
+	--mid-grey-2: #d9d9d9;
+	--charcoal-grey: #4b4b4b;
+	--mint: #00c7be;
+	--orange: #ff9500;
+	--cyan: #32ade6;
+	--green: #34c759;
+	--deep-green: #011f00;
+	--indigo: #5856d6;
+	--sky-blue: #4fc7ff;
+	--light-grey-2: #cccccc;
+	--royal-blue: #2c59c3;
+	--cream-peach: #ffeed0;
+	--light-grey-3: #f2f2f2;
+	--pale-indigo: #f1f5ff;
+	--navy: #012b56;
+	--slate: #4a5565;
+	--cool-grey: #6a7282;
+	--near-black: #0a0a0a;
 }
 
 @theme inline {
 	--color-background: var(--background);
-	--color-foreground: var(--foreground);
+	--color-light-cream: var(--light-cream);
+	--color-extra-light-grey: var(--extra-light-grey);
+	--color-mid-grey: var(--mid-grey);
+	--color-mid-grey-2: var(--mid-grey-2);
+	--color-charcoal-grey: var(--charcoal-grey);
+	--color-mint: var(--mint);
+	--color-orange: var(--orange);
+	--color-cyan: var(--cyan);
+	--color-green: var(--green);
+	--color-deep-green: var(--deep-green);
+	--color-indigo: var(--indigo);
+	--color-sky-blue: var(--sky-blue);
+	--color-light-grey-2: var(--light-grey-2);
+	--color-royal-blue: var(--royal-blue);
+	--color-cream-peach: var(--cream-peach);
+	--color-light-grey-3: var(--light-grey-3);
+	--color-pale-indigo: var(--pale-indigo);
+	--color-navy: var(--navy);
+	--color-slate: var(--slate);
+	--color-cool-grey: var(--cool-grey);
+	--color-near-black: var(--near-black);
+	--breakpoint-des: 75rem;
 }
 
 html {
@@ -16,7 +57,6 @@ html {
 
 body {
 	background: var(--background);
-	color: var(--foreground);
 	font-family: var(--font-figtree);
 	display: flex;
 	flex-direction: column;
