@@ -35,6 +35,11 @@ export default function Button({
 					? 'border-royal-blue text-royal-blue hover:text-white hover:bg-royal-blue'
 					: ''
 			}
+      ${
+				variant === 'secondary-white'
+					? 'border-white text-white hover:text-royal-blue hover:bg-white'
+					: ''
+			}
       ${size === 'm' ? 'h-[max(2.5rem,40px)]' : ''}
       ${size === 'l' ? 'h-[max(3.125rem,50px)]' : ''}
       ${className}

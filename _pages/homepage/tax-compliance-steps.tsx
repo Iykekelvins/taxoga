@@ -146,7 +146,7 @@ export default function TaxComplianceSteps() {
 				<div className='flex flex-col sm:flex-row items-start justify-between gap-[max(40px)]'>
 					<div
 						className='flex flex-col gap-[max(1.5rem,20px)]
-            max-w-[max(37.688rem,377px)] sticky top-[max(86px)] sm:top-36 lg:top-30 des:top-24
+            max-w-[max(37.688rem,377px)] md:sticky top-[max(86px)] sm:top-36 lg:top-30 des:top-24
             '>
 						<Tag>How It Works</Tag>
 						<h2 className='text-heading text-40 leading-[1.7] font-bold'>
@@ -157,12 +157,12 @@ export default function TaxComplianceSteps() {
 							your return.
 						</p>
 						<div className='flex flex-col lg:flex-row items-center gap-[max(1.5rem,24px)]'>
-							<Button variant='primary-blue' className='w-full lg:w-fit'>
+							<Button variant='primary-blue' className='w-full lg:w-fit font-medium'>
 								<Whatsapp />
 								<span>Speak with an Expert</span>
 							</Button>
-							<Button variant='secondary-blue' className='w-full lg:w-fit'>
-								Seek Tax Support
+							<Button variant='secondary-blue' className='w-full lg:w-fit font-bold'>
+								Assess Your Tax Needs
 							</Button>
 						</div>
 					</div>
