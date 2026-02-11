@@ -48,6 +48,8 @@
 	--color-slate: var(--slate);
 	--color-cool-grey: var(--cool-grey);
 	--color-near-black: var(--near-black);
+	--text-14: max(0.875rem, 14px);
+	--container-container: max(75rem, 1200px);
 	--breakpoint-des: 75rem;
 }
 
@@ -72,6 +74,7 @@ button,
 	cursor: pointer;
 	outline: none;
 	font-family: inherit;
+	transition: all 0.3s ease-in-out;
 }
 
 .track {
