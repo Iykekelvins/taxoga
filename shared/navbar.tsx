@@ -1,5 +1,6 @@
-import Button from '@/components/button';
 import { Whatsapp } from '@/components/icons';
+
+import Button from '@/components/button';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,7 +8,7 @@ export default function Navbar() {
 	return (
 		<header
 			className='bg-white border-b border-b-mid-grey border-solid
-      px-[max(5rem,16px)] h-[max(4.7rem,62px)] sticky top-0 z-20
+      px-gutter h-[max(4.7rem,62px)] sticky top-0 z-20
       flex items-center
       '>
 			<nav className='flex items-center justify-between w-full max-w-container mx-auto'>
