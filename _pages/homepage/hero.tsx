@@ -8,7 +8,7 @@ export default function Hero() {
 		<section
 			className='bg-[linear-gradient(180deg,#001F3F_0%,#003366_100%),linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2))]
 		 pt-[max(5rem,40px)]  lg:pb-[max(7.313rem)] relative px-gutter'>
-			<div className='max-w-container mx-auto'>
+			<div className='app-container'>
 				<div
 					className='flex flex-col lg:flex-row lg:items-center lg:gap-9.25 justify-between
 				relative z-2

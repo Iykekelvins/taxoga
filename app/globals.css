@@ -23,6 +23,7 @@
 	--slate: #4a5565;
 	--cool-grey: #6a7282;
 	--near-black: #0a0a0a;
+	--heading: #001f3f;
 }
 
 @theme inline {
@@ -48,11 +49,14 @@
 	--color-slate: var(--slate);
 	--color-cool-grey: var(--cool-grey);
 	--color-near-black: var(--near-black);
+	--color-heading: var(--heading);
 	--text-14: max(0.875rem, 14px);
 	--text-16: max(1rem, 14px);
 	--text-20: max(1.25rem, 16px);
+	--text-40: max(2.5rem, 32px);
 	--text-48: max(3rem, 32px);
 	--text-60: max(3.85rem, 24px);
+	--text-100: max(6.25rem, 80px);
 	--container-container: max(75rem, 1200px);
 	--spacing-gutter: max(5rem, 16px);
 	--breakpoint-des: 75rem;
@@ -100,4 +104,8 @@ button,
 	100% {
 		transform: translate3d(-50%, 0, 0);
 	}
+}
+
+.app-container {
+	@apply max-w-container mx-auto;
 }

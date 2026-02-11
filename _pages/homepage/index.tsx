@@ -1,5 +1,6 @@
 import Hero from './hero';
 import Stats from './stats';
+import TaxComplianceSteps from './tax-compliance-steps';
 import ChatWidget from './chat-widget';
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
 		<div>
 			<Hero />
 			<Stats />
+			<TaxComplianceSteps />
 			<ChatWidget />
 		</div>
 	);
