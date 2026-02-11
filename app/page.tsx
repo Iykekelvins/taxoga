@@ -1,5 +1,7 @@
+import Home from '@/_pages/homepage';
+
 const Homepage = () => {
-	return <div>Homepage</div>;
+	return <Home />;
 };
 
 export default Homepage;

@@ -49,12 +49,15 @@
 	--color-cool-grey: var(--cool-grey);
 	--color-near-black: var(--near-black);
 	--text-14: max(0.875rem, 14px);
+	--text-20: max(1.25rem, 16px);
+	--text-48: max(3rem, 32px);
 	--container-container: max(75rem, 1200px);
+	--spacing-gutter: max(5rem, 16px);
 	--breakpoint-des: 75rem;
 }
 
 html {
-	font-size: calc(100vw / 1440 * 14);
+	font-size: calc(100vw / 1200 * 14);
 }
 
 body {
@@ -75,6 +78,7 @@ button,
 	outline: none;
 	font-family: inherit;
 	transition: all 0.3s ease-in-out;
+	white-space: nowrap;
 }
 
 .track {
