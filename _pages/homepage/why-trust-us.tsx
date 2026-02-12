@@ -111,7 +111,7 @@ export default function WhyTrustUs() {
 							</div>
 							<div className='h-full'>
 								<figure
-									className='relative h-[max(40rem,270px)] 
+									className='relative min-h-[max(40rem,270px)] 
 								lg:min-h-[max(31.3125rem,270px)]'>
 									<Image
 										src={`/home/trust-${i + 1}.webp`}
