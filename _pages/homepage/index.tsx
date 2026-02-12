@@ -5,6 +5,7 @@ import WhoWeServe from './who-we-serve';
 import WhyTrustUs from './why-trust-us';
 import Testimonials from './testimonials';
 import TaxCommunity from './tax-community';
+import Faqs from './faqs';
 import ChatWidget from './chat-widget';
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
 			<WhyTrustUs />
 			<Testimonials />
 			<TaxCommunity />
+			<Faqs />
 			<ChatWidget />
 		</div>
 	);
