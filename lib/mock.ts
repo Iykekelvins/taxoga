@@ -137,3 +137,42 @@ export const TESTIMONIALS = [
 		},
 	},
 ];
+
+export const FOOTERLINKS = [
+	{
+		title: 'File Your Personal Taxes',
+		links: [
+			'Diaspora & International Taxes',
+			'Self Employed and Business Owners',
+			'Freelancers & Remote Workers',
+			'Salary Earners',
+		],
+	},
+	{
+		title: 'File Your Personal Taxes',
+		links: ['Small & Mid Sized Businesses', 'Large Business'],
+	},
+	{
+		title: 'Tax Guides',
+		links: [
+			'How to file my personal taxes',
+			'How to file my business taxes',
+			'How to file diaspora taxes',
+			'How to file taxes for my staff',
+		],
+	},
+	{
+		title: 'Resources',
+		links: [
+			'Self Tax Assessment',
+			'Tax Calculator',
+			'Tax Chatbot',
+			'Tax Community',
+			'Blog',
+		],
+	},
+	{
+		title: 'Quick Links',
+		links: ['About Us', 'How It Works', 'Privacy Policy', 'Terms of Service'],
+	},
+];

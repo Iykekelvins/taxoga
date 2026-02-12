@@ -18,7 +18,7 @@ export default function GetStarted() {
 							<p className='text-charcoal-grey text-20 leading-[1.7]'>
 								Begin your tax journey the right way and stay compliant.
 							</p>
-							<div className='flex items-center gap-[max(1.5rem,20px)]'>
+							<div className='flex flex-col lg:flex-row items-center gap-[max(1.5rem,20px)]'>
 								<Button
 									variant='primary-blue'
 									size='l'
