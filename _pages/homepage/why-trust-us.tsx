@@ -60,7 +60,7 @@ export default function WhyTrustUs() {
 	);
 
 	return (
-		<section className='pt-[max(5rem,80px)]'>
+		<section className='py-[max(5rem,80px)]'>
 			<div className='px-gutter'>
 				<div className='app-container'>
 					<div className='space-y-[max(1.5rem,24px)]'>
@@ -79,8 +79,7 @@ export default function WhyTrustUs() {
 
 			<div
 				className='mt-[max(2.5rem,40px)] overflow-x-hidden
-			px-gutter lg:px-0
-			'
+				px-gutter lg:px-0'
 				ref={cardsContainer}>
 				<ul
 					className='flex flex-col lg:flex-row items-center gap-[max(5rem,40px)]'
