@@ -27,7 +27,7 @@ export default function WhyTrustUs() {
 						// markers: true,
 						pin: true,
 						scrub: 1,
-						start: 'bottom 90%',
+						start: 'bottom 95%',
 						end: () => `+=${cardsList.current!.scrollWidth - window.innerWidth}`,
 						invalidateOnRefresh: true,
 						pinSpacing: true,

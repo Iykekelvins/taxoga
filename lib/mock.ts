@@ -100,3 +100,40 @@ export const TRUSTUSCARDS = [
 		background: '#AF52DE',
 	},
 ];
+
+export const TESTIMONIALS = [
+	{
+		name: 'Juicy Fruit Ltd.',
+		info: '“Choosing the right tax plan is crucial for success. Whether a freelancer, business owner, or employee”',
+		image: '/home/juicy-fruit.webp',
+		taxType: 'Company Tax',
+		video: {
+			src: '',
+		},
+	},
+	{
+		name: 'Maryam Musa, CEO Meck Doramen',
+		info: '“The tax assessment tool is incredibly useful! It simplifies the process of evaluating my tax situation, making it”',
+		image: '/home/maryam.webp',
+		taxType: 'Personal Tax',
+		video: null,
+	},
+	{
+		name: 'Nancy Ogunlise',
+		info: '“Choosing the right tax plan is crucial for success. Whether a freelancer, business owner, or employee” ',
+		image: '/home/nancy.webp',
+		taxType: 'Personal Tax',
+		video: {
+			src: '',
+		},
+	},
+	{
+		name: 'James Barber’s Shop.',
+		info: '“Choosing the right tax plan is crucial for success. Whether a freelancer, business owner, or employee” ',
+		image: '/home/james.webp',
+		taxType: 'Company Tax',
+		video: {
+			src: '',
+		},
+	},
+];
