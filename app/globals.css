@@ -3,6 +3,7 @@
 :root {
 	--background: #ffffff;
 	--light-cream: #fffff6;
+	--light-grey: #f0f0f0;
 	--extra-light-grey: #f4f4f4;
 	--mid-grey: #e9e9e9;
 	--mid-grey-2: #d9d9d9;
@@ -29,6 +30,7 @@
 @theme inline {
 	--color-background: var(--background);
 	--color-light-cream: var(--light-cream);
+	--color-light-grey: var(--light-grey);
 	--color-extra-light-grey: var(--extra-light-grey);
 	--color-mid-grey: var(--mid-grey);
 	--color-mid-grey-2: var(--mid-grey-2);
@@ -54,6 +56,7 @@
 	--text-16: max(1rem, 14px);
 	--text-20: max(1.25rem, 16px);
 	--text-30: max(1.875rem, 24px);
+	--text-36: max(2.25rem, 30px);
 	--text-40: max(2.5rem, 32px);
 	--text-48: max(3rem, 32px);
 	--text-60: max(3.85rem, 24px);

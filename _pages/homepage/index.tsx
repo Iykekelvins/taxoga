@@ -2,6 +2,7 @@ import Hero from './hero';
 import Stats from './stats';
 import TaxComplianceSteps from './tax-compliance-steps';
 import WhoWeServe from './who-we-serve';
+import WhyTrustUs from './why-trust-us';
 import ChatWidget from './chat-widget';
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
 			<Stats />
 			<TaxComplianceSteps />
 			<WhoWeServe />
+			<WhyTrustUs />
 			<ChatWidget />
 		</div>
 	);

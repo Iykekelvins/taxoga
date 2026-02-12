@@ -55,3 +55,48 @@ export const SERVECARDS = [
 		background: '#5856D6',
 	},
 ];
+
+export const TRUSTUSCARDS = [
+	{
+		tagline: 'Save as Much as Possible.',
+		title: 'Legally Maximize Your Returns',
+		intro:
+			'Our goal isn’t just to file your taxes — it’s to keep more money in your pocket.',
+		info: 'We claim every legal relief and deduction you qualify for, from pensions, to rent — so you keep more of your money, legally.',
+		bottomText: 'Over N100M Saved',
+		background: '#32ADE6',
+	},
+	{
+		tagline: 'Trust & Experience',
+		title: 'Experience You Can Count On',
+		intro: 'We speak the language of FIRS — and translate it into results for you.',
+		info: 'We’ve helped individuals, freelancers, and businesses navigate Nigeria’s complex tax system. You get local insight and proven results — not guesswork.',
+		bottomText: '200+ Returns Filed',
+		background: '#FF9500',
+	},
+	{
+		tagline: 'Razor Sharp Accuracy',
+		title: 'Accuracy That Protects You',
+		intro: 'Because one wrong entry can cost you — we make sure it never does.',
+		info: 'We’ve helped individuals, freelancers, and businesses navigate Nigeria’s complex tax system. You get local insight and proven results — not guesswork.',
+		bottomText: '0% Tax Errors',
+		background: '#34C759',
+	},
+	{
+		tagline: 'Tax Experts Who Care',
+		title: 'Real Support From Real People',
+		intro:
+			'Because good tax support should sound like a conversation, not a lecture.',
+		info: 'Our team of Nigerian tax experts is here to help by chat or phone — simple answers, no jargon.',
+		bottomText: 'Thoughtful Experts',
+		background: '#00C7BE',
+	},
+	{
+		tagline: 'Transparent Fees and Process',
+		title: 'Transparent From Start to Finish',
+		intro: 'Trust starts with transparency — and we build it into every filing.',
+		info: 'You always know what’s filed, what’s due, and what you’re paying for. No hidden charges, no inflated numbers.',
+		bottomText: 'You’re In Control',
+		background: '#AF52DE',
+	},
+];
