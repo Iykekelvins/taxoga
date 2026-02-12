@@ -3,6 +3,7 @@ import { Figtree } from 'next/font/google';
 import { Lenis } from 'lenis/react';
 
 import Navbar from '@/shared/navbar';
+import GetStarted from '@/shared/get-started';
 import Footer from '@/shared/footer';
 
 import './globals.css';
@@ -37,7 +38,10 @@ export default function RootLayout({
 				}}>
 				<body className={`${figtree.variable} antialiased`}>
 					<Navbar />
-					<main>{children}</main>
+					<main>
+						{children}
+						<GetStarted />
+					</main>
 					<Footer />
 				</body>
 			</Lenis>
