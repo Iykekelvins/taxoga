@@ -79,24 +79,24 @@ export default function WhyTrustUs() {
 
 			<div
 				className='mt-[max(2.5rem,40px)] overflow-x-hidden
-				px-gutter lg:px-0'
+				'
 				ref={cardsContainer}>
 				<ul
-					className='flex flex-col lg:flex-row items-center gap-[max(5rem,40px)]'
+					className='flex items-center gap-[max(5rem,40px)] max-lg:overflow-x-auto'
 					ref={cardsList}>
 					{TRUSTUSCARDS.map((card, i) => (
 						<li
 							key={card.tagline}
-							className={`flex flex-col-reverse lg:grid lg:grid-cols-2 lg:min-w-253.25
+							className={`flex flex-col-reverse lg:grid lg:grid-cols-2 min-w-[max(63.3125rem,360px)]
 							rounded-[max(2.5rem,40px)] overflow-hidden self-stretch
-							${i === 0 ? 'lg:ml-gutter' : i === TRUSTUSCARDS.length - 1 ? 'lg:mr-gutter' : ''}
-						`}>
+							${i === 0 ? 'ml-gutter' : i === TRUSTUSCARDS.length - 1 ? 'mr-gutter' : ''}
+						`}
+							style={{
+								background: card.background,
+							}}>
 							<div
 								className='flex flex-col gap-[max(1.25rem,16px)] 
-								justify-center p-[max(1.5rem,24px)]'
-								style={{
-									background: card.background,
-								}}>
+								justify-center p-[max(1.5rem,24px)]'>
 								<h3 className='text-heading text-20'>{card.tagline}</h3>
 								<h4 className='text-white text-36 font-bold leading-[1.2] tracking-tight'>
 									{card.title}
@@ -110,7 +110,9 @@ export default function WhyTrustUs() {
 								</h5>
 							</div>
 							<div className='h-full'>
-								<figure className='relative h-full min-h-[max(40rem,270px)] lg:min-h-[max(31.3125rem,270px)]'>
+								<figure
+									className='relative h-[max(40rem,270px)] 
+								lg:min-h-[max(31.3125rem,270px)]'>
 									<Image
 										src={`/home/trust-${i + 1}.webp`}
 										fill
