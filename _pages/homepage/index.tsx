@@ -6,6 +6,7 @@ import WhyTrustUs from './why-trust-us';
 import Testimonials from './testimonials';
 import TaxCommunity from './tax-community';
 import Faqs from './faqs';
+import GetStarted from '@/shared/get-started';
 import ChatWidget from './chat-widget';
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
 			<Testimonials />
 			<TaxCommunity />
 			<Faqs />
+			<GetStarted />
 			<ChatWidget />
 		</div>
 	);
