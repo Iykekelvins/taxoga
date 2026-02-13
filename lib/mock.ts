@@ -138,6 +138,45 @@ export const TESTIMONIALS = [
 	},
 ];
 
+export const TAXBRACKETS = [
+	{
+		income_range: '₦0 - ₦800,000',
+		rate: '0%',
+		max_tax: '₦0',
+		background: '#00C950',
+	},
+	{
+		income_range: '₦800,001 - ₦3,200,000',
+		rate: '15%',
+		max_tax: '₦168,000',
+		background: '#2B7FFF',
+	},
+	{
+		income_range: '₦3,200,001 - ₦6,400,000',
+		rate: '18%',
+		max_tax: '₦352,000',
+		background: '#4B1AFF',
+	},
+	{
+		income_range: '₦6,400,001 - ₦12,800,000',
+		rate: '21%',
+		max_tax: '₦960,000',
+		background: '#BE9800',
+	},
+	{
+		income_range: '₦12,800,001 - ₦25,600,000',
+		rate: '23%',
+		max_tax: '₦2,432,000',
+		background: '#FF6900',
+	},
+	{
+		income_range: '₦25,600,001 - Above',
+		rate: '25%',
+		max_tax: '—',
+		background: '#FB2C36',
+	},
+];
+
 export const FOOTERLINKS = [
 	{
 		title: 'File Your Personal Taxes',
