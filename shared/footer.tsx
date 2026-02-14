@@ -1,3 +1,6 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
 import {
 	FacebookIcon,
 	InstagramIcon,
@@ -12,6 +15,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
+	const pathname = usePathname();
+
 	const SOCIALS = [
 		{
 			href: '',
@@ -37,8 +42,10 @@ export default function Footer() {
 
 	return (
 		<footer
-			className='bg-navy py-[max(3rem,48px)] px-gutter 
-			mt-[max(6.875rem,80px)]'>
+			className={`bg-navy py-[max(3rem,48px)] px-gutter 
+			mt-[max(6.875rem,80px)]
+			${pathname === '/tax-calculator' ? 'max-sm:pb-[max(240px)]' : ''}
+			`}>
 			<div className='app-container'>
 				<div>
 					<Link href='/'>
