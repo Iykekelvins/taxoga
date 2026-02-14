@@ -14,3 +14,16 @@ type DeductionState = {
 	nhisPremium: string | number;
 	gratitude: string | number;
 };
+
+type TaxCalculatorInfo = {
+	band: string;
+	rate: number;
+	taxPaid: number;
+	taxableAmount: number;
+};
+
+type TaxData = {
+	taxPaid: number;
+	monthly: number;
+	rate: number;
+};

@@ -1,9 +1,11 @@
 export default function IncomeSources({
 	incomeState,
 	setIncomeState,
+	totalIncome,
 }: {
 	incomeState: IncomeState;
 	setIncomeState: (income: IncomeState) => void;
+	totalIncome: number;
 }) {
 	const incomeInputs = [
 		{
@@ -30,16 +32,17 @@ export default function IncomeSources({
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
 		const { name, value } = e.target;
+		const rawValue = value.replace(/,/g, '');
+
+		if (!/^\d*$/.test(rawValue)) return;
+
+		const formattedValue = rawValue ? Number(rawValue).toLocaleString() : '';
+
 		setIncomeState({
 			...incomeState,
-			[name]: value,
+			[name]: formattedValue,
 		});
 	};
-
-	const totalIncome = Object.values(incomeState).reduce<number>(
-		(sum, value) => sum + (Number(value) || 0),
-		0,
-	);
 
 	return (
 		<div
@@ -60,7 +63,7 @@ export default function IncomeSources({
 							{input.label}
 						</label>
 						<input
-							type='number'
+							type='value'
 							min={0}
 							name={input.id}
 							id={input.id}

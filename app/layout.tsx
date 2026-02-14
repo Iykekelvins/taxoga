@@ -7,6 +7,7 @@ import GetStarted from '@/shared/get-started';
 import Footer from '@/shared/footer';
 
 import './globals.css';
+import { Toaster } from 'sonner';
 
 const figtree = Figtree({
 	variable: '--font-figtree',
@@ -42,6 +43,7 @@ export default function RootLayout({
 						{children}
 						<GetStarted />
 					</main>
+					<Toaster position='top-left' richColors theme='dark' />
 					<Footer />
 				</body>
 			</Lenis>

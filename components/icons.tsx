@@ -346,3 +346,85 @@ export const InfoCircle = () => {
 		</svg>
 	);
 };
+
+export const CalculatorIcon = () => {
+	return (
+		<svg
+			width='16'
+			height='16'
+			viewBox='0 0 16 16'
+			fill='none'
+			xmlns='http://www.w3.org/2000/svg'>
+			<path
+				d='M12.0003 1.33325H4.00033C3.26395 1.33325 2.66699 1.93021 2.66699 2.66659V13.3333C2.66699 14.0696 3.26395 14.6666 4.00033 14.6666H12.0003C12.7367 14.6666 13.3337 14.0696 13.3337 13.3333V2.66659C13.3337 1.93021 12.7367 1.33325 12.0003 1.33325Z'
+				stroke='white'
+				strokeWidth='1.33333'
+				strokeLinecap='round'
+				strokeLinejoin='round'
+			/>
+			<path
+				d='M5.33301 4H10.6663'
+				stroke='white'
+				strokeWidth='1.33333'
+				strokeLinecap='round'
+				strokeLinejoin='round'
+			/>
+			<path
+				d='M10.667 9.33325V11.9999'
+				stroke='white'
+				strokeWidth='1.33333'
+				strokeLinecap='round'
+				strokeLinejoin='round'
+			/>
+			<path
+				d='M10.667 6.66675H10.6737'
+				stroke='white'
+				strokeWidth='1.33333'
+				strokeLinecap='round'
+				strokeLinejoin='round'
+			/>
+			<path
+				d='M8 6.66675H8.00667'
+				stroke='white'
+				strokeWidth='1.33333'
+				strokeLinecap='round'
+				strokeLinejoin='round'
+			/>
+			<path
+				d='M5.33301 6.66675H5.33967'
+				stroke='white'
+				strokeWidth='1.33333'
+				strokeLinecap='round'
+				strokeLinejoin='round'
+			/>
+			<path
+				d='M8 9.33325H8.00667'
+				stroke='white'
+				strokeWidth='1.33333'
+				strokeLinecap='round'
+				strokeLinejoin='round'
+			/>
+			<path
+				d='M5.33301 9.33325H5.33967'
+				stroke='white'
+				strokeWidth='1.33333'
+				strokeLinecap='round'
+				strokeLinejoin='round'
+			/>
+			<path
+				d='M8 12H8.00667'
+				stroke='white'
+				strokeWidth='1.33333'
+				strokeLinecap='round'
+				strokeLinejoin='round'
+			/>
+			<path
+				d='M5.33301 12H5.33967'
+				stroke='white'
+				strokeWidth='1.33333'
+				strokeLinecap='round'
+				strokeLinejoin='round'
+			/>
+		</svg>
+	);
+};

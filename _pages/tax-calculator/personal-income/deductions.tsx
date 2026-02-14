@@ -1,9 +1,11 @@
 export default function Deductions({
 	deductionState,
 	setDeductionState,
+	totalDeductions,
 }: {
 	deductionState: DeductionState;
 	setDeductionState: (deduction: DeductionState) => void;
+	totalDeductions: number;
 }) {
 	const deductionInputs = [
 		{
@@ -34,16 +36,17 @@ export default function Deductions({
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
 		const { name, value } = e.target;
+		const rawValue = value.replace(/,/g, '');
+
+		if (!/^\d*$/.test(rawValue)) return;
+
+		const formattedValue = rawValue ? Number(rawValue).toLocaleString() : '';
+
 		setDeductionState({
 			...deductionState,
-			[name]: value,
+			[name]: formattedValue,
 		});
 	};
-
-	const totalDeductions = Object.values(deductionState).reduce<number>(
-		(sum, value) => sum + (Number(value) || 0),
-		0,
-	);
 
 	return (
 		<div
@@ -64,7 +67,7 @@ export default function Deductions({
 							{input.label}
 						</label>
 						<input
-							type='number'
+							type='text'
 							min={0}
 							name={input.id}
 							id={input.id}

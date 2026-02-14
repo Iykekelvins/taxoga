@@ -9,11 +9,13 @@
 	--mid-grey-2: #d9d9d9;
 	--charcoal: #717171;
 	--charcoal-grey: #4b4b4b;
+	--night-grey: #3d3d3d;
 	--mint: #00c7be;
 	--orange: #ff9500;
 	--cyan: #32ade6;
 	--green: #34c759;
 	--deep-green: #011f00;
+	--red: #c90000;
 	--indigo: #5856d6;
 	--sky-blue: #4fc7ff;
 	--light-grey-2: #cccccc;
@@ -38,12 +40,14 @@
 	--color-mid-grey-2: var(--mid-grey-2);
 	--color-charcoal: var(--charcoal);
 	--color-charcoal-grey: var(--charcoal-grey);
+	--color-night-grey: var(--night-grey);
 	--color-mint: var(--mint);
 	--color-orange: var(--orange);
 	--color-cyan: var(--cyan);
 	--color-green: var(--green);
 	--color-deep-green: var(--deep-green);
 	--color-indigo: var(--indigo);
+	--color-red: var(--red);
 	--color-sky-blue: var(--sky-blue);
 	--color-light-grey-2: var(--light-grey-2);
 	--color-royal-blue: var(--royal-blue);
@@ -133,4 +137,20 @@ input[type='number']::-webkit-outer-spin-button,
 input[type='number']::-webkit-inner-spin-button {
 	appearance: none;
 	margin: 0;
+}
+
+.spinner {
+	@apply size-[max(1rem,16px)];
+	border-radius: 50%;
+	background:
+		radial-gradient(farthest-side, #2c59c3 94%, #0000) top/3.8px 3.8px no-repeat,
+		conic-gradient(#0000 30%, #2c59c3);
+	-webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 3.8px), #000 0);
+	animation: spinner-c7wet2 1s infinite linear;
+}
+
+@keyframes spinner-c7wet2 {
+	100% {
+		transform: rotate(1turn);
+	}
 }
