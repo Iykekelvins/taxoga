@@ -1,5 +1,6 @@
 type TaxBreakdownProps = {
 	brackets: Bracket[];
+	isCompany?: boolean;
 };
 
 type Bracket = {
@@ -9,7 +10,7 @@ type Bracket = {
 	percentage: number;
 };
 
-export default function TaxBreakdown({ brackets }: TaxBreakdownProps) {
+export default function TaxBreakdown({ brackets, isCompany }: TaxBreakdownProps) {
 	return (
 		<div
 			className='border border-border border-solid bg-white
@@ -19,8 +20,9 @@ export default function TaxBreakdown({ brackets }: TaxBreakdownProps) {
 
 			{brackets.length === 0 ? (
 				<p className='text-14 text-charcoal text-center mt-[max(2.5rem,20px)] leading-[1.4]'>
-					Enter your income details and click &apos;&apos;Calculate Tax&apos;&apos;
-					to see your tax breakdown.
+					{!isCompany
+						? 'Enter your income details and click "Calculate Tax" to see your tax breakdown.'
+						: 'Enter your business details to see your tax breakdown.'}
 				</p>
 			) : (
 				<ul className='space-y-[max(0.75rem,12px)] mt-[max(1.5rem,24px)]'>

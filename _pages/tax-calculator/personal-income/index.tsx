@@ -66,14 +66,14 @@ export default function PersonalIncome() {
 		const income = Object.fromEntries(
 			Object.entries(incomeState).map(([key, value]) => [
 				key,
-				parseFloat(value as string) || 0,
+				parseFloat(String(value).replace(/,/g, '')) || 0,
 			]),
 		) as Record<keyof typeof incomeState, number>;
 
 		const deductions = Object.fromEntries(
 			Object.entries(deductionState).map(([key, value]) => [
 				key,
-				parseFloat(value as string) || 0,
+				parseFloat(String(value).replace(/,/g, '')) || 0,
 			]),
 		) as Record<keyof typeof deductionState, number>;
 

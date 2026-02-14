@@ -27,3 +27,62 @@ type TaxData = {
 	monthly: number;
 	rate: number;
 };
+
+type Industry = {
+	createdBy: string;
+	dateCreated: string;
+	description: string;
+	extraProperty: string;
+	id: string;
+	identifier: null;
+	isRequired: boolean;
+	name: string;
+	optionType: null;
+	optionTypeId: string;
+};
+
+type IndustryData = {
+	value: {
+		value: {
+			data: Industry[];
+		};
+	};
+};
+
+type ConfigurationData = {
+	value: {
+		value: {
+			name: string;
+			description: string;
+			fixedOrPercentage: string;
+			identifier: string;
+			value: string | undefined;
+			organizationId: string;
+			id: string;
+			createdBy: string;
+			dateCreated: string;
+			dateLastModified: null;
+			lastModifiedBy: null;
+		};
+	};
+};
+
+type CompanyIncomeState = {
+	industry: string;
+	totalSalesRevenue: string;
+	profitMade: string;
+	yearOfIncorporation: string;
+	totalNetProfit: string;
+};
+
+type ExtraProperty = {
+	RequiresIncomeTax: boolean;
+	HasExemptionPeriod: boolean;
+	ExemptionPeriodYears: number;
+};
+
+type TaxLiabilityProps = {
+	annual_tax: number | undefined;
+	monthly: number | undefined;
+	rate: number | undefined;
+};

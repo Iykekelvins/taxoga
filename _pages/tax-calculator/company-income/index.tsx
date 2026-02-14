@@ -1,3 +1,164 @@
+import { useFetch } from '@/hooks/useFetch';
+import { useMemo, useState } from 'react';
+
+import IncomeSources from './income-sources';
+import TaxLiability from '../tax-liability';
+import TaxBreakdown from '../tax-breakdown';
+
+const initialIncomeState: CompanyIncomeState = {
+	industry: '',
+	totalSalesRevenue: '',
+	profitMade: '',
+	yearOfIncorporation: '',
+	totalNetProfit: '',
+};
+
 export default function CompanyIncome() {
-	return <div>CompanyIncome</div>;
+	const { data: configuration, isLoading } = useFetch<ConfigurationData>(
+		'https://api.taxoga.com/public/system-configuration/COMPANY_INCOME_TAX_CONFIGURATION',
+	);
+
+	const configurationValues: {
+		TaxRate: number;
+		TaxableAmountThreshold: number;
+	} = isLoading ? {} : JSON.parse(configuration?.value?.value?.value as string);
+
+	const [incomeState, setIncomeState] = useState(initialIncomeState);
+	const [extraProperty, setExtraProperty] = useState<ExtraProperty | null>(null);
+
+	const isInExemptionPeriod = (
+		hasExemptionPeriod: boolean,
+		exemptionPeriodYears: number,
+		yearOfIncorporation: number,
+	): boolean => {
+		if (!hasExemptionPeriod) return false;
+
+		const currentYear = new Date().getFullYear();
+		const yearsSinceIncorporation = currentYear - yearOfIncorporation;
+
+		return yearsSinceIncorporation <= exemptionPeriodYears;
+	};
+
+	const taxPayable = useMemo(() => {
+		const shouldCalculateTax =
+			extraProperty?.RequiresIncomeTax &&
+			incomeState.profitMade === 'yes' &&
+			incomeState.totalSalesRevenue === 'more_than_threshold' &&
+			!isInExemptionPeriod(
+				extraProperty!.HasExemptionPeriod,
+				extraProperty!.ExemptionPeriodYears,
+				Number(incomeState.yearOfIncorporation),
+			);
+
+		if (!shouldCalculateTax) return 0;
+
+		const netProfit = Number(String(incomeState.totalNetProfit).replace(/,/g, ''));
+		return (configurationValues?.TaxRate / 100) * netProfit;
+	}, [
+		incomeState.profitMade,
+		incomeState.totalSalesRevenue,
+		incomeState.totalNetProfit,
+		incomeState.yearOfIncorporation,
+		configurationValues?.TaxRate,
+		extraProperty,
+	]);
+
+	const monthlyTaxPayment = useMemo(() => {
+		return taxPayable / 12;
+	}, [taxPayable]);
+
+	const effectiveTaxRate = useMemo(() => {
+		const netProfit = Number(String(incomeState.totalNetProfit).replace(/,/g, ''));
+
+		if (netProfit === 0) return 0;
+
+		return (taxPayable / netProfit) * 100;
+	}, [taxPayable, incomeState.totalNetProfit]);
+
+	const taxBracket = useMemo(() => {
+		if (!extraProperty) return [];
+
+		const inExemptionPeriod = isInExemptionPeriod(
+			extraProperty.HasExemptionPeriod,
+			extraProperty.ExemptionPeriodYears,
+			Number(incomeState.yearOfIncorporation),
+		);
+
+		const shouldShowTaxFree =
+			!extraProperty.RequiresIncomeTax ||
+			(extraProperty.HasExemptionPeriod && inExemptionPeriod);
+
+		if (shouldShowTaxFree) {
+			return [
+				{
+					name: 'Tax-Free',
+					info: 'You are in a tax-free industry',
+					payable_amount: 0,
+					percentage: 0,
+				},
+			];
+		}
+
+		if (taxPayable > 0) {
+			return [
+				{
+					name: `${configurationValues?.TaxRate}% Band`,
+					info: `₦${incomeState?.totalNetProfit} taxed at ${configurationValues?.TaxRate}%`,
+					payable_amount: taxPayable,
+					percentage: 100,
+				},
+			];
+		}
+
+		return [
+			{
+				name: 'No Tax',
+				info: 'Conditions for tax calculation not met',
+				payable_amount: 0,
+				percentage: 0,
+			},
+		];
+	}, [
+		taxPayable,
+		configurationValues?.TaxRate,
+		incomeState.totalNetProfit,
+		incomeState.yearOfIncorporation,
+		extraProperty,
+	]);
+
+	const handleReset = () => {
+		setIncomeState(initialIncomeState);
+		setExtraProperty(null);
+	};
+
+	return (
+		<div className='mt-[max(2rem,24px)] grid sm:grid-cols-2 gap-[max(1.5rem,16px)]'>
+			<div className='space-y-[max(1.5rem,16px)]'>
+				<IncomeSources
+					incomeState={incomeState}
+					setIncomeState={setIncomeState}
+					setExtraProperty={setExtraProperty}
+					configurationValues={configurationValues}
+				/>
+				<button
+					className='flex items-center justify-center h-[max(2.813rem,45px)]
+					border border-border border-solid rounded-[max(0.75rem,12px)]
+					px-[max(1rem,16px)] text-14 text-near-black font-medium w-full
+					hover:border-royal-blue
+					'
+					onClick={handleReset}>
+					Reset All
+				</button>
+			</div>
+
+			<div className='space-y-[max(1.5rem,16px)]'>
+				<TaxLiability
+					annual_tax={taxPayable}
+					monthly={monthlyTaxPayment}
+					rate={effectiveTaxRate}
+				/>
+				<TaxBreakdown brackets={taxBracket} isCompany />
+			</div>
+		</div>
+	);
 }
