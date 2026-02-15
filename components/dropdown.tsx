@@ -85,7 +85,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
 				onClick={() => !disabled && setIsOpen(!isOpen)}
 				disabled={disabled}
 				className={`
-					w-full px-[max(0.75rem,12px)] h-[max(2.813rem,45px)] text-left border border-mid-grey border-solid rounded-[max(0.5rem,8px)]
+					w-full px-[max(0.75rem,12px)] h-[max(2.813rem,45px)] text-left border 
+					border-mid-grey border-solid rounded-[max(0.5rem,8px)]
 					flex items-center justify-between text-14
 					${disabled ? 'opacity-50 cursor-not-allowed' : 'hover:border-near-black cursor-pointer'}
 					${isOpen ? 'border-near-black' : ''}
@@ -94,7 +95,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
 					{selectedOption ? selectedOption.label : placeholder}
 				</span>
 				<svg
-					className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${isOpen ? '-rotate-180' : ''}`}
+					className={`text-gray-500 transition-transform duration-300 
+						${isOpen ? '-rotate-180' : ''}`}
 					fill='none'
 					stroke='currentColor'
 					viewBox='0 0 24 24'>
@@ -110,7 +112,9 @@ export const Dropdown: React.FC<DropdownProps> = ({
 			{/* Dropdown Menu */}
 			{isOpen && (
 				<div
-					className='absolute z-10 w-full mt-1 bg-white border border-mid-grey rounded-[max(0.5rem,8px)] shadow-lg max-h-[max(15rem,300px)] overflow-auto'
+					className='absolute z-10 w-full mt-[max(0.25rem,4px)] bg-white border 
+					border-mid-grey rounded-[max(0.5rem,8px)] 
+					shadow-lg max-h-[max(15rem,300px)] overflow-auto'
 					data-lenis-prevent>
 					{options.length === 0 ? (
 						<div className='px-[max(1rem,16px)] py-[max(0.5rem,8px)] text-[#717182] text-14'>
@@ -123,7 +127,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
 								type='button'
 								onClick={() => handleSelect(option.value)}
 								className={`
-									w-full px-4 py-2 text-12 text-left hover:bg-gray-100 transition-colors
+									w-full px-[max(1rem,16px)] py-[max(0.5rem,8px)] text-14 text-left hover:bg-gray-100 transition-colors
                   flex items-center justify-between
 									${option.value === value ? 'text-near-black font-medium' : 'text-[#717182]'}
 								`}>
