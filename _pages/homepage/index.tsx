@@ -7,11 +7,13 @@ import Testimonials from './testimonials';
 import TaxCommunity from './tax-community';
 import Faqs from './faqs';
 import ChatWidget from './chat-widget';
+import ChatItems from './chat-items';
 
 const Home = () => {
 	return (
 		<div>
 			<Hero />
+			<ChatItems />
 			<Stats />
 			<TaxComplianceSteps />
 			<WhoWeServe />
