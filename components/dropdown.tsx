@@ -96,7 +96,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
 				</span>
 				<svg
 					className={`text-gray-500 transition-transform duration-300 
-						${isOpen ? '-rotate-180' : ''}`}
+					size-[max(1.25rem,20px)]	${isOpen ? '-rotate-180' : ''}`}
 					fill='none'
 					stroke='currentColor'
 					viewBox='0 0 24 24'>
