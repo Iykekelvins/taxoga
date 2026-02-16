@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CalculatorIcon } from '@/components/icons';
+import { CalculatorIcon, InfoCircle } from '@/components/icons';
 import { toast } from 'sonner';
 
 import IncomeSources from './income-sources';
@@ -149,6 +149,19 @@ export default function PersonalIncome() {
 
 	return (
 		<div className='mt-[max(2rem,24px)] grid sm:grid-cols-2 gap-[max(1.5rem,16px)]'>
+			<div
+				className='flex items-start gap-[max(0.75rem,12px)] 
+								border border-royal-blue border-solid py-[max(0.813rem,13px)]
+								rounded-[max(24px)] px-[max(1.063rem,14px)] sm:hidden
+							'>
+				<InfoCircle />
+				<p className='text-14 text-[#717182] leading-[1.4] -mt-[max(4px,0.25rem)]'>
+					The personal income calculator calculates the income of individuals and
+					registered business names. Business names are calculated using the personal
+					income calculator because they are taxed like individuals.
+				</p>
+			</div>
+
 			<div className='space-y-[max(1.5rem,16px)]'>
 				<IncomeSources
 					incomeState={incomeState}

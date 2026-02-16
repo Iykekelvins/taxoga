@@ -1,5 +1,6 @@
 import { useFetch } from '@/hooks/useFetch';
 import { useMemo, useState } from 'react';
+import { InfoCircle } from '@/components/icons';
 
 import IncomeSources from './income-sources';
 import TaxLiability from '../tax-liability';
@@ -133,6 +134,17 @@ export default function CompanyIncome() {
 
 	return (
 		<div className='mt-[max(2rem,24px)] grid sm:grid-cols-2 gap-[max(1.5rem,16px)]'>
+			<div
+				className='flex items-start gap-[max(0.75rem,12px)] 
+											border border-royal-blue border-solid py-[max(0.813rem,13px)]
+											rounded-[max(24px)] px-[max(1.063rem,14px)] sm:hidden
+										'>
+				<InfoCircle />
+				<p className='text-14 text-[#717182] leading-[1.4] -mt-[max(4px,0.25rem)]'>
+					The business calculator calculates the income of registered limited
+					liability companies.
+				</p>
+			</div>
 			<div className='space-y-[max(1.5rem,16px)]'>
 				<IncomeSources
 					incomeState={incomeState}
