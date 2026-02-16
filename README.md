@@ -6,6 +6,11 @@ FRONTEND TECHNICAL INTERVIEW FOR GIDAA, FOR PROJECT TAXOGA.
 How to run the development server:
 
 ```bash
+npm install
+```
+
+```bash
+npm install
 npm run dev
 ```
 
