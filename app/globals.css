@@ -73,7 +73,7 @@
 	--text-60: max(3.85rem, 24px);
 	--text-100: max(6.25rem, 80px);
 	--container-container: max(75rem, 1200px);
-	--spacing-gutter: max(5rem, 16px);
+	--spacing-gutter: clamp(16px, 4vw, 5rem);
 	--breakpoint-des: 75rem;
 }
 

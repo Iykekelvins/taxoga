@@ -82,7 +82,7 @@ export default function WhyTrustUs() {
 				'
 				ref={cardsContainer}>
 				<ul
-					className='flex items-center gap-[max(5rem,40px)] max-lg:overflow-x-auto'
+					className='flex items-center gap-[max(9px)] md:gap-[max(5rem,40px)] max-lg:overflow-x-auto'
 					ref={cardsList}>
 					{TRUSTUSCARDS.map((card, i) => (
 						<li
