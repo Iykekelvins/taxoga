@@ -1,17 +1,26 @@
+'use client';
+
+import { useState } from 'react';
 import { Whatsapp } from '@/components/icons';
 
 import Button from '@/components/button';
 import Image from 'next/image';
 import Link from 'next/link';
+import Menu from './menu';
 
 export default function Navbar() {
+	const [openMenu, setOpenMenu] = useState(false);
+
 	return (
 		<header
 			className='bg-white border-b border-b-mid-grey border-solid
       px-gutter h-[max(4.7rem,62px)] sticky top-0 z-20
       flex items-center
       '>
-			<nav className='flex items-center justify-between w-full max-w-container mx-auto'>
+			<nav
+				className='flex items-center justify-between w-full max-w-container mx-auto
+			relative z-20
+			'>
 				<Link href='/'>
 					<Image src='/logo.png' width={93} height={25} alt='TaxOga logo' />
 				</Link>
@@ -65,11 +74,25 @@ export default function Navbar() {
 					<Button variant='secondary-blue'>Seek Tax Support</Button>
 				</div>
 
-				<button className='grid gap-[max(0.5rem,8px)] lg:hidden'>
-					<span className='h-[max(1.75px)] bg-black w-[max(24px)]' />
-					<span className='h-[max(2px)] bg-black w-[max(24px)]' />
+				<button
+					className='grid gap-[max(0.5rem,8px)] lg:hidden'
+					onClick={() => setOpenMenu(!openMenu)}>
+					<span
+						className={`h-[max(1.75px)] bg-black w-[max(24px)]
+							transition-transform duration-500 ease 
+						${openMenu ? 'rotate-45' : ''}
+						`}
+					/>
+					<span
+						className={`h-[max(2px)] bg-black w-[max(24px)]
+						transition-transform duration-500 ease 
+						${openMenu ? '-rotate-45 absolute' : ''}
+						`}
+					/>
 				</button>
 			</nav>
+
+			<Menu openMenu={openMenu} setOpenMenu={setOpenMenu} />
 		</header>
 	);
 }
