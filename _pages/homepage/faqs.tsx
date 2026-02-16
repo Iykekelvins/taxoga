@@ -66,8 +66,9 @@ function Faq({
 
 	return (
 		<li
-			className='border border-[#0000001A] border-solid rounded-[max(0.75rem,12px)]
-    '>
+			className={`border border-[#0000001A] border-solid rounded-[max(0.75rem,12px)]
+				transition-all duration-300 ease ${isFaqSelected ? 'border-near-black' : ''}
+    `}>
 			<button
 				className='p-[max(1.5rem,24px)] text-18 text-near-black font-semibold
       w-full text-left flex items-center justify-between
