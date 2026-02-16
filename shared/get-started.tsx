@@ -12,7 +12,7 @@ export default function GetStarted() {
         p-[max(2.5rem,24px)]'>
 					<div
 						className='flex flex-col lg:flex-row lg:items-center 
-          justify-between gap-[max(1rem,14px)]'>
+          justify-between gap-[max(1.5rem,24px)]'>
 						<div className='space-y-[max(1.5rem,24px)]'>
 							<h2 className='text-heading text-40 font-bold'>Get Started</h2>
 							<p className='text-charcoal-grey text-20 leading-[1.7]'>
@@ -41,7 +41,7 @@ export default function GetStarted() {
 								width={192}
 								height={177}
 								alt=''
-								className='w-full md:w-fit'
+								className='w-full lg:w-fit'
 							/>
 						</div>
 					</div>
