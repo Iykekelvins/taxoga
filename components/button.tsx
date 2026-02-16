@@ -21,23 +21,23 @@ export default function Button({
       border-2 border-solid px-[max(1rem,16px)] text-14
       ${
 				variant === 'primary-blue'
-					? `bg-royal-blue border-royal-blue text-white hover:bg-transparent 
-        hover:text-royal-blue hover:[&_svg_path]:fill-royal-blue`
+					? `bg-royal-blue border-royal-blue text-white des:hover:bg-transparent 
+        des:hover:text-royal-blue des:hover:[&_svg_path]:fill-royal-blue`
 					: ''
 			}
       ${
 				variant === 'primary-white'
-					? 'bg-white border-white text-royal-blue hover:bg-transparent hover:text-white'
+					? 'bg-white border-white text-royal-blue des:hover:bg-transparent des:hover:text-white'
 					: ''
 			}
       ${
 				variant === 'secondary-blue'
-					? 'border-royal-blue text-royal-blue hover:text-white hover:bg-royal-blue'
+					? 'border-royal-blue text-royal-blue des:hover:text-white des:hover:bg-royal-blue'
 					: ''
 			}
       ${
 				variant === 'secondary-white'
-					? 'border-white text-white hover:text-royal-blue hover:bg-white'
+					? 'border-white text-white des:hover:text-royal-blue des:hover:bg-white'
 					: ''
 			}
       ${size === 'm' ? 'h-[max(2.5rem,40px)]' : ''}

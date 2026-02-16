@@ -147,6 +147,12 @@ input[type='number']::-webkit-inner-spin-button {
 		conic-gradient(#0000 30%, #2c59c3);
 	-webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 3.8px), #000 0);
 	animation: spinner-c7wet2 1s infinite linear;
+
+	@media screen and (max-width: 1199px) {
+		background:
+			radial-gradient(farthest-side, #fff 94%, #0000) top/3.8px 3.8px no-repeat,
+			conic-gradient(#0000 30%, #fff);
+	}
 }
 
 @keyframes spinner-c7wet2 {
