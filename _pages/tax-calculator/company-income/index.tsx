@@ -5,6 +5,7 @@ import { InfoCircle } from '@/components/icons';
 import IncomeSources from './income-sources';
 import TaxLiability from '../tax-liability';
 import TaxBreakdown from '../tax-breakdown';
+import IncomeSummary from '../income-summary';
 
 const initialIncomeState: CompanyIncomeState = {
 	industry: '',
@@ -170,6 +171,11 @@ export default function CompanyIncome() {
 					rate={effectiveTaxRate}
 				/>
 				<TaxBreakdown brackets={taxBracket} isCompany />
+				<IncomeSummary
+					gross_income={Number(incomeState.totalNetProfit.replace(/,/g, ''))}
+					deductions={0}
+					taxPaid={taxPayable}
+				/>
 			</div>
 		</div>
 	);
